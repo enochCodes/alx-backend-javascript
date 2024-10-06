@@ -8,7 +8,9 @@ export default function createIteratorObject(report) {
     },
     next() {
       if (index < allEmployees.length) {
-        return { value: allEmployees[index++], done: false };
+        const value = allEmployees[index];
+        index += 1;
+        return { value, done: false };
       }
       return { done: true };
     },
