@@ -9,6 +9,10 @@ interface Teacher {
     [propName: string]: any;
 }
 
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
+
 const teacher3: Teacher = {
     firstName: 'John',
     fullTimeEmployee: false,
@@ -16,8 +20,17 @@ const teacher3: Teacher = {
     location: 'London',
     contract: false,
   };
+
+const director1: Directors = {
+    firstName: 'Jane',
+    lastName: 'Doe',
+    location: 'California',
+    fullTimeEmployee: true,
+    numberOfReports: 17,
+};
+
   
-  console.log(teacher3);
+console.log(teacher3);
   
   // should print
   // Object
@@ -26,3 +39,12 @@ const teacher3: Teacher = {
   // fullTimeEmployee: false
   // lastName: "Doe"
   // location: "London"
+console.log(director1);
+    
+    // should print
+    // Object
+    // firstName: "Jane"
+    // lastName: "Doe"
+    // location: "California"
+    // fullTimeEmployee: true
+    // numberOf
